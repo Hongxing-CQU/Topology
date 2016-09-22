@@ -13,7 +13,7 @@ $2^X$是其幂集，即以$X$的所有子集为成员的集合，
 $X$的一个子集族$\tau$称为$X$的一个拓扑，如果其满足:\\
 1) $X$与$\emptyset$包含在$\tau$中；\\
 2) $\tau$中任意多个成员的并集仍然在$\tau$中；\\
-3) $\tau$中有限多个成员的交集仍然在$\tau$中；(也可以说：$\tau$中任意两个成员的交集仍然在$\tau$中)\\
+3) $\tau$中有限多个成员的交集仍然在$\tau$中；(也可以说：$\tau$中任意两个成员的交集仍然在$\tau$ 中)\\
 集合$X$和$\tau$一起称为一个拓扑空间，
 记作$(X,\tau)$.
 称$\tau$中的成员为这个拓扑空间的开集。\\
@@ -105,7 +105,7 @@ $C\subset A\subset X$,
 2) 若$A$是$X$的开(闭)集，若$B$是$A$的开(闭)集,
 则若$B$也是$X$的开(闭)集\\
 
-\section{ 连续映射与同胚映射}
+\subsection{ 连续映射与同胚映射}
 
 {\hei 连续映射的定义}
 连续性是一种局部性概念。\\
@@ -163,6 +163,58 @@ $A$是$X$的一子集，$x\in A$.
 设$\{A_1,A_2,...,A_n\}$是$X$的一个有限闭覆盖，
 如果映射$f: X\rightarrow Y$在每个$A_i$上的限制都是连续的，
 则$f$是连续映射。\\
+
+{\hei 同胚映射}\\
+如果$f:X\rightarrow Y$是一一对应，
+并且$f$及其逆$f^{-1}：Y\rightarrow X$都是连续的，
+则称$f$是一个同胚映射，或称拓扑变换，简称同胚。\\
+当存在$X$到$Y$的同胚映射时，
+就称$X$与$Y$同胚，记作$X\cong Y$.
+
+{\hei 嵌入映射}\\
+$f:X\rightarrow Y$ 是单的连续映射，
+$f:X\rightarrow f(X)$是同胚映射，
+则称$f:X\rightarrow Y$是嵌入映射。\\
+
+{\hei 拓扑概念{ } 拓扑性质}\\
+拓扑空间在同胚映射下保持不变的概念叫拓扑概念；
+在同胚映射下保持不变的性质叫拓扑性质。\\
+
+
+\subsection{ 乘积空间与拓扑基}
+
+设$\mathscr B$是$X$的子集族，
+规定一个新的子集族\\
+$\bar{\mathscr B}:=\{U\subset X|U\text{是}\mathscr B\text{中若干成员的并集} \}\\
+                  =\{U\subset X | \forall x\in U, \exists B\in\mathscr B, \text{使得} x\in B \subset U\}$\\
+称$\bar{\mathscr{B}}$为$\mathscr B$所生成的子集族。 显然$\mathscr B \subset \bar{\mathscr B}$, $\phi\in\bar{\mathscr B}$\\
+
+笛卡尔积：$X_1 \times X_2 = \{(x_1,x_2)|x_i\in X_i\}$ \\
+
+投射：规定$j_i: X_1 \ times X_2 \rightarrow X_i$为$j_i(x_1,x_2)=x_i$,
+称$j_i$为$X_1\times X_2$到$X_i$的投射. \\
+
+容易验证： $(A_1\times B_1)\cap(A_2\times B_2)=(A_1\cap A_2)\times(B_1\cap B_2)$\\
+
+\subsubsection{乘积空间}
+设$(X_1,\tau_1)$和$(X_2,\tau_2)$
+是两个拓扑空间，
+现在要在笛卡尔积$X_1\times X_2$上规定一个与$\tau_1$与$\tau_2$密切相关的一个拓扑$\tau$,
+这个拓扑$\tau$要满足要求：$\tau$要使$j_i$都连续，并且是满足此要求的最小拓扑。
+
+实际上，满足这个条件的最小拓扑就是$\bar{\mathscr B}$.\\
+
+{\hei 命题1.10}
+$\bar{\mathscr B}$是$X_1 \times X_2$上的拓扑。
+
+{\hei 定义 1.10}
+称$\bar{\mathscr B}$为$X_1\times X_2$上的乘积拓扑，
+称$X_1\times X_2，\bar{\mathscr B}$为$(X_1,\tau_1)$和$(X_2,\tau_2)$的乘积空间，记为$X_1\times X_2$。\\
+
+
+
+
+
 
 
 
