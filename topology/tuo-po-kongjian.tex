@@ -211,6 +211,50 @@ $\bar{\mathscr B}$是$X_1 \times X_2$上的拓扑。
 称$\bar{\mathscr B}$为$X_1\times X_2$上的乘积拓扑，
 称$X_1\times X_2，\bar{\mathscr B}$为$(X_1,\tau_1)$和$(X_2,\tau_2)$的乘积空间，记为$X_1\times X_2$。\\
 
+\subsubsection{乘积空间的性质}
+{\hei 分量映射}\\
+设$Y$是任一拓扑空间，
+$f: Y\rightarrow X_1\times X_2$是一映射，
+称$f_i = j_i\circ f:Y\rightarrow X_i$为$f$的分量映射。
+
+{\hei 定理 1.3： }
+对于任何拓扑空间$Y$和映射$f:Y\rightarrow X_1\times X_2$,
+$f\text{连续}\Longleftrightarrow f\text{的分量连续}$.\\
+
+
+注： 对于多个拓扑空间的乘积空间，该定理仍然成立。
+还可证明，
+$X_1\times X_2$使定理成立的拓扑只有乘积拓扑。\\
+
+{\hei 推论:} $\forall b\in X_2$,
+由$x\mapsto(x,b)$规定的映射$j_b:X_1\rightarrow X_1\times X_2$
+是嵌入映射。\\
+
+\subsubsection{拓扑基}
+{\hei 定义 1.11}\\
+称集合$X$的子集族$\mathscr B$是集合$X$的拓扑基，
+如果$\mathscr B$是$X$的一个拓扑。\\
+称拓扑空间$(X,\tau)$的子集族$\mathscr B$为这个拓扑空间的拓扑基，
+如果$\mathscr B = \tau $.\\
+
+{\hei 命题1.11 }\\
+$\mathscr B$是集合$X$的拓扑基的充分必要条件是：\\
+(1)$\cup_{B\in{\mathscr B}}=X$\\
+(2)若$B_1,B_2\in\mathscr B$,则$B_1\cap B_2\in\bar{\mathscr B}$(也就是说$\forall x\in B_1\cap B_2$,
+存在$B\in\mathscr B$,使得$x\in B\subset B_1\cap B_2$).\\
+
+{\hei 命题1.12 }\\
+$\mathscr B$是拓扑空间$(X,\tau)$的拓扑基的充要条件为：\\
+(1)$\mathscr B\cap\tau$(即$\mathscr B$的成员是开集)\\
+(2)$\tau\cap\bar{\mathscr B}$(即每个开集都是$\mathscr B$中一些成员的并集).\\
+
+
+
+
+
+
+
+
 
 
 
