@@ -15,6 +15,130 @@ $y$有邻域不含$x$.\\
 
 {\hei 命题{ }2.1} $X$满足$T_1$公理$\Longleftrightarrow X$的有限子集是闭集.\\
 
+证明：
+$\Longrightarrow$.\quad 
+要证明有限子集是闭集，由于有限个闭集的并集是闭集，
+因此只需证单点集是闭集. 取$x\in X$. 当$y\neq x$时，
+$T_1$公理说，存在$x$的邻域不含$y$,存在$y$的邻域不含$x$.
+$y$有邻域不含$x$,($x\in \bar A\Longleftrightarrow x$的任一邻域与$A$都有交点).
+说明$y\bar\in \bar{\{x\}}$,
+而$y$是任一不同于$x$的点，
+说明$y\bar\in \bar{\{x\}}=x$.
+故${\{x\}}$为闭集. \\
+
+$\Longleftarrow$\quad
+设$x\neq y$,
+因为$y$是闭集，
+所以$X\backslash\{y\}$是$x$的开邻域，
+同样$X\backslash\{x\}$是$y$的开邻域.
+因此，$X$满足公理$T_1$.
+
+{\hei 推论}\quad
+若$X$满足$T_1$公理，
+$A\subset X$,
+点$x$是$A$的聚点，
+则$x$的任一邻域与$A$的交是无穷集。\\
+证明：
+反证法。首先假定$U$是$x$的一邻域，不妨设为开邻域，$U\cap A$是有限集。
+记$B=(U\cap A)\backslash\{x\}$,仍然是有限集，因此是闭集。
+那么$U\backslash B=U\cap B^c$是$x$的一个开邻域，
+它不含$A\backslash \{x\}$中的点，
+与$x$是$A$的聚点相矛盾.\\
+
+{\hei Hausdorff空间}\\
+满足$T_2$公理的空间为Hausdorff空间\\
+
+{\hei 命题2.2}\quad
+Hausdorff空间中，
+一个序列不会收敛到两个以上的点。\\
+证明：
+假设一个序列$\{x_n\}$收敛到$x_0$,同时收敛到$x$.
+分别取$x_0$和$x$的邻域$U$和$V$,
+由于是Hausdorff空间，则满足$T_2$公理，
+存在不相交的$U$和$V$，
+说明不可能同时含有无限多个$\{x_n\}$系列，
+说明不能有两个收敛点。\\
+
+\subsubsection{$T_3$公理和$T_4$公理}
+{\hei $T_3$公理}\quad
+任意一点与不含它的闭集有不相交的开邻域.\\
+
+{\hei $T_4$公理}\quad
+任意两个不相交的闭集有不相交的（开）邻域.\\
+
+注：如果$X$满足$T_1$公理，那么单点集是闭集.
+因此$T_3$能够推出$T_2$,$T_4$可以推出$T_3$.
+
+{\hei 命题2.3}\quad
+度量空间$(X,d)$满足$T_i(i=1,2,3,4)$公理.
+
+{\hei 命题2.4}\\
+(1)满足$T_3$公理$\Longleftrightarrow$任意点$x$和它的开邻域$W$,存在$x$的开邻域$U$，使得$\bar U\subset W$.\\
+(2)满足$T_4$公理$\Longleftrightarrow$任意闭集$A$和它的开邻域$W$,存在$A$的开邻域$U$，使得$\bar U\subset W$.\\
+(2)的证明：\quad
+$\Longrightarrow$. 设$A$与$B$是不相交的闭集,
+则$B^c$是$A$的开邻域.
+由条件，存在$A$的开邻域$U$,使得$\bar U\subset B^c$,
+记$V=(\bar U)^c$,则$V$是开集，且$U\cap V=\emptyset$\\
+$\Longleftarrow$. 
+记$B=W^c$,则，$A$与$B$为不相交的闭集.
+由$T_4$公理，存在$A$与$B$不相交的开邻域$U$与$V$. 
+则$U$为所求，因为$\bar U\subset {\bar V}^c \subset {\bar B}^c = W$.\\
+
+\subsubsection{可数公理}
+{\hei 邻域系} \quad $x\in X$,$x$所有邻域的集合,记作$\mathscr N(x)$.\\
+
+{\hei 邻域基} \quad $\mathscr N(x)$的一个子集$\mathscr U$称为$x$的一个邻域基，
+如果$x $的每一个邻域都至少包含$\mathscr U$的一个元素.\\
+
+{\hei $C_1$公理}\quad 任一点都有可数的邻域基. \\
+
+{\hei 命题2.5} \quad 如果$X$在$x$处有可数邻域基，
+则x处有可数邻域基$\{V_n\}$,
+使得$m>n$时，$V_m\subset V_n$.\\
+证明：\quad 先任取$x$的一个可数邻域基$\{U_n\}$,
+规定$V_n=\bigcap\limits_{i=1}^nU_i,\forall n\in N$.
+则$V_n\subset U_n$,
+从而$\{V_n\}$也是$x$的一个可数邻域基，且
+$m>n$时，$V_m\subset V_n$。\\
+
+{\hei 命题2.6}\quad
+若$X$是$C_1$空间，
+$A\subset X$,$x\in\bar A$,则$A$中存在收敛到$x$的序列.\\
+证明：\quad
+取$x$处的可数邻域基$\{V_n\}$,
+使得$m>n$时，$V_m\subset V_n$,
+因为$x\in\bar A$,
+所以，$V_n\bigcap A\neq\emptyset$,
+取$x_n\in V_n\bigcap A$,$\forall n$,
+得到$A$中的序列$\{x_n\}$.
+任取$x$的邻域$U$,则存在$n$,
+使得$V_n\subset U$,从而$V_m\subset U,\forall m>n$.
+于是$x\in U,\forall m>n$,
+按收敛的定义，有$x_n\leftarrow x$\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
